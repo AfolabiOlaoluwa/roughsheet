@@ -33,7 +33,6 @@ def find_website(org_name, city, county):
         all_hrefs = [link['href'] for link in soup.find_all('a', href=True)]
         google_urls = [href for href in all_hrefs if href.startswith('/url?q=')]
         clean_urls = [url.replace('/url?q=', '') for url in google_urls]
-        import pdb; pdb.set_trace()
 
         org_name_split = [word.strip() for word in re.split(r'\s+', org_name.lower()) if word.strip()]
 
@@ -99,7 +98,6 @@ print(f"Updated file saved to {output_file}")
 # Found website for 1 MODEL MANAGEMENT LONDON LIMITED: onemanagement.com
 # Found website for 1 Oak Home Care: www.1oakcare.com
 # Found website for  McMullan Shellfish: emcmullan.co.uk
-# Found website for (IECC Care) Independent Excel Care Consortium Limited: None
 # Found website for ???£ ESS LTD: www.essltd.ie
 # Found website for @ Architect UK Ltd: www.architectltd.co.uk
 # Found website for @ Home Accommodation Services Ltd: www.homeaccommodation.co.uk
@@ -116,4 +114,12 @@ print(f"Updated file saved to {output_file}")
 # Found website for 1 Homecare Ltd: 1homecare.co.uk
 # Found website for 1 Key Solution Limited: 1keysolution.co.uk
 # Found website for 1 Kings Dental Limited: 1kingsdental.com
-# Error occurred: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+# Found website for 1 Oak Home Care: www.1oakcare.com
+# Found website for 1 Stop Print Ltd: 1stopprint.co.uk
+# Found website for 1 Stop Wash Ltd: 1stopwash.com
+# Found website for 10 Squared Ltd: 10squared.co.uk
+# Found website for 1000heads Ltd: 1000heads.com
+# Found website for 101 Harley Street LTD: 101hs.co.uk
+# Found website for 1066 PLUMBING AND HEATING LTD: www.1066plumbingandheating.co.uk
+# Found website for 10ACT Ltd T/A TrackBack: www.trackback.net
+# Found website for 10architect Ltd: www.10architect.com
